@@ -1,0 +1,618 @@
+
+
+
+Cisco IOS Software, C2960 Software (C2960-LANBASE-M), Version 12.2(25)FX, RELEASE SOFTWARE (fc1)
+Copyright (c) 1986-2005 by Cisco Systems, Inc.
+Compiled Wed 12-Oct-05 22:05 by pt_team
+Image text-base: 0x80008098, data-base: 0x814129C4
+
+
+
+Cisco WS-C2960-24TT (RC32300) processor (revision C0) with 21039K bytes of memory.
+
+
+24 FastEthernet/IEEE 802.3 interface(s)
+2 Gigabit Ethernet/IEEE 802.3 interface(s)
+
+63488K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : 0002.4A14.6831
+Motherboard assembly number     : 73-9832-06
+Power supply part number        : 341-0097-02
+Motherboard serial number       : FOC103248MJ
+Power supply serial number      : DCA102133JA
+Model revision number           : B0
+Motherboard revision number     : C0
+Model number                    : WS-C2960-24TT
+System serial number            : FOC1033Z1EY
+Top Assembly Part Number        : 800-26671-02
+Top Assembly Revision Number    : B0
+Version ID                      : V02
+CLEI Code Number                : COM3K00BRA
+Hardware Board Revision Number  : 0x01
+
+
+Switch   Ports  Model              SW Version              SW Image
+------   -----  -----              ----------              ----------
+*    1   26     WS-C2960-24TT      12.2                    C2960-LANBASE-M
+
+Cisco IOS Software, C2960 Software (C2960-LANBASE-M), Version 12.2(25)FX, RELEASE SOFTWARE (fc1)
+Copyright (c) 1986-2005 by Cisco Systems, Inc.
+Compiled Wed 12-Oct-05 22:05 by pt_team
+
+Press RETURN to get started!
+
+
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/2, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/2, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/3, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/3, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/4, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/4, changed state to up
+
+
+SW1>
+SW1>
+SW1>en
+SW1#
+SW1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW1(config)#
+SW1(config)#int f0/1
+SW1(config-if)#swit
+SW1(config-if)#switchport mode access
+SW1(config-if)#swit
+SW1(config-if)#switchport access vlan 10
+% Access VLAN does not exist. Creating vlan 10
+SW1(config-if)#int f0/2
+SW1(config-if)#switchport mode access
+SW1(config-if)#switchport access vlan 10
+SW1(config-if)#int f0/3
+SW1(config-if)#switchport mode access
+SW1(config-if)#switchport access vlan 30
+% Access VLAN does not exist. Creating vlan 30
+SW1(config-if)#int f0/4
+SW1(config-if)#switchport mode access
+SW1(config-if)#switchport access vlan 30
+SW1(config-if)#int g0/1
+SW1(config-if)#switchport mode trunk
+
+SW1(config-if)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+SW1(config-if)#switchport trunk allowed vlan 10,30
+SW1(config-if)#switchport trunk allowed native
+SW1(config-if)#switchport trunk allowed native v
+SW1(config-if)#switchport trunk allowed native ?
+% Unrecognized command
+SW1(config-if)#switchport trunk native ?
+  vlan  Set native VLAN when interface is in trunking mode
+SW1(config-if)#switchport trunk native vlan 1001
+SW1(config-if)#end
+SW1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+SW1#
+SW1#wr
+Building configuration...
+[OK]
+SW1#
+SW1#
+SW1#
+%CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/1 (1001), with SW2 GigabitEthernet0/1 (1).
+
+%CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/1 (1001), with SW2 GigabitEthernet0/1 (1).
+
+
+
+
+
+
+
+
+
+SW1 con0 is now available
+
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+SW1>
+SW1>en
+SW1#
+SW1#sh ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/1        unassigned      YES manual up                    up 
+FastEthernet0/2        unassigned      YES manual up                    up 
+FastEthernet0/3        unassigned      YES manual up                    up 
+FastEthernet0/4        unassigned      YES manual up                    up 
+FastEthernet0/5        unassigned      YES manual down                  down 
+FastEthernet0/6        unassigned      YES manual down                  down 
+FastEthernet0/7        unassigned      YES manual down                  down 
+FastEthernet0/8        unassigned      YES manual down                  down 
+FastEthernet0/9        unassigned      YES manual down                  down 
+FastEthernet0/10       unassigned      YES manual down                  down 
+FastEthernet0/11       unassigned      YES manual down                  down 
+FastEthernet0/12       unassigned      YES manual down                  down 
+FastEthernet0/13       unassigned      YES manual down                  down 
+FastEthernet0/14       unassigned      YES manual down                  down 
+FastEthernet0/15       unassigned      YES manual down                  down 
+FastEthernet0/16       unassigned      YES manual down                  down 
+FastEthernet0/17       unassigned      YES manual down                  down 
+FastEthernet0/18       unassigned      YES manual down                  down 
+FastEthernet0/19       unassigned      YES manual down                  down 
+FastEthernet0/20       unassigned      YES manual down                  down 
+FastEthernet0/21       unassigned      YES manual down                  down 
+FastEthernet0/22       unassigned      YES manual down                  down 
+FastEthernet0/23       unassigned      YES manual down                  down 
+FastEthernet0/24       unassigned      YES manual down                  down 
+GigabitEthernet0/1     unassigned      YES manual up                    up 
+GigabitEthernet0/2     unassigned      YES manual down                  down 
+Vlan1                  unassigned      YES manual administratively down down
+SW1#
+SW1#
+SW1#
+SW1#
+SW1#
+SW1#
+SW1#sh int trunk
+Port        Mode         Encapsulation  Status        Native vlan
+Gig0/1      on           802.1q         trunking      1001
+
+Port        Vlans allowed on trunk
+Gig0/1      10,30
+
+Port        Vlans allowed and active in management domain
+Gig0/1      10,30
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gig0/1      10,30
+
+SW1#--------------------------------------------------------------------------
+
+Press RETURN to get started!
+
+
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/2, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/2, changed state to up
+
+%LINK-5-CHANGED: Interface FastEthernet0/3, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/3, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+%CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/1 (1), with SW1 GigabitEthernet0/1 (1001).
+
+
+SW2>
+SW2>
+SW2>en
+SW2#
+SW2#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW2(config)#
+SW2(config)#int f0/1
+SW2(config-if)#switch
+SW2(config-if)#switchport mode access
+SW2(config-if)#switchport access vlan 20
+% Access VLAN does not exist. Creating vlan 20
+SW2(config-if)#int f0/2
+SW2(config-if)#switchport mode access
+SW2(config-if)#switchport access vlan 10
+% Access VLAN does not exist. Creating vlan 10
+SW2(config-if)#
+%CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/1 (1), with SW1 GigabitEthernet0/1 (1001).
+
+SW2(config-if)#int f0/3
+SW2(config-if)#switchport mode access
+SW2(config-if)#switchport access vlan 10
+SW2(config-if)#int g0/1
+SW2(config-if)#switchport mode trunk
+SW2(config-if)#switchport trunk allowed vlan 
+%CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/1 (1), with SW1 GigabitEthernet0/1 (1001).
+
+% Incomplete command.
+SW2(config-if)#switchport trunk allowed vlan 10,30
+SW2(config-if)#switchport trunk native vlan 1001
+SW2(config-if)#
+SW2(config-if)#int g0/2
+SW2(config-if)#switchport mode trunk
+SW2(config-if)#switchport trunk allowed vlan 10,20,30
+SW2(config-if)#switchport trunk native vlan 1001
+SW2(config-if)#end
+SW2#
+%SYS-5-CONFIG_I: Configured from console by console
+
+SW2#wr
+Building configuration...
+[OK]
+SW2#
+SW2#
+%LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to up
+
+SW2#
+SW2#sh int trunk
+Port        Mode         Encapsulation  Status        Native vlan
+Gig0/1      on           802.1q         trunking      1001
+Gig0/2      on           802.1q         trunking      1001
+
+Port        Vlans allowed on trunk
+Gig0/1      10,30
+Gig0/2      10,20,30
+
+Port        Vlans allowed and active in management domain
+Gig0/1      10
+Gig0/2      10,20
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gig0/1      10
+Gig0/2      10,20
+
+SW2#sh int trunk
+Port        Mode         Encapsulation  Status        Native vlan
+Gig0/1      on           802.1q         trunking      1001
+Gig0/2      on           802.1q         trunking      1001
+
+Port        Vlans allowed on trunk
+Gig0/1      10,30
+Gig0/2      10,20,30
+
+Port        Vlans allowed and active in management domain
+Gig0/1      10
+Gig0/2      10,20
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gig0/1      10
+Gig0/2      10,20
+
+SW2#sh int g0/2
+GigabitEthernet0/2 is up, line protocol is up (connected)
+  Hardware is Lance, address is 0001.639b.3c1a (bia 0001.639b.3c1a)
+ BW 1000000 Kbit, DLY 1000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full-duplex, 1000Mb/s
+  input flow-control is off, output flow-control is off
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:08, output 00:00:05, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue :0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     956 packets input, 193351 bytes, 0 no buffer
+     Received 956 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 watchdog, 0 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     2357 packets output, 263570 bytes, 0 underruns
+     0 output errors, 0 collisions, 10 interface resets
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+
+SW2#
+SW2#
+SW2#sh int vlan 30
+%Interface Vlan30 does not exist.
+
+SW2#sh int vlan ?
+  <1-4094>  Vlan interface number
+SW2#sh ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+FastEthernet0/1        unassigned      YES manual up                    up 
+FastEthernet0/2        unassigned      YES manual up                    up 
+FastEthernet0/3        unassigned      YES manual up                    up 
+FastEthernet0/4        unassigned      YES manual down                  down 
+FastEthernet0/5        unassigned      YES manual down                  down 
+FastEthernet0/6        unassigned      YES manual down                  down 
+FastEthernet0/7        unassigned      YES manual down                  down 
+FastEthernet0/8        unassigned      YES manual down                  down 
+FastEthernet0/9        unassigned      YES manual down                  down 
+FastEthernet0/10       unassigned      YES manual down                  down 
+FastEthernet0/11       unassigned      YES manual down                  down 
+FastEthernet0/12       unassigned      YES manual down                  down 
+FastEthernet0/13       unassigned      YES manual down                  down 
+FastEthernet0/14       unassigned      YES manual down                  down 
+FastEthernet0/15       unassigned      YES manual down                  down 
+FastEthernet0/16       unassigned      YES manual down                  down 
+FastEthernet0/17       unassigned      YES manual down                  down 
+FastEthernet0/18       unassigned      YES manual down                  down 
+FastEthernet0/19       unassigned      YES manual down                  down 
+FastEthernet0/20       unassigned      YES manual down                  down 
+FastEthernet0/21       unassigned      YES manual down                  down 
+
+SW2#sh int status
+Port      Name               Status       Vlan       Duplex  Speed Type
+Fa0/1                        connected    20         auto    auto  10/100BaseTX
+Fa0/2                        connected    10         auto    auto  10/100BaseTX
+Fa0/3                        connected    10         auto    auto  10/100BaseTX
+Fa0/4                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/5                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/6                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/7                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/8                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/9                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/10                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/11                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/12                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/13                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/14                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/15                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/16                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/17                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/18                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/19                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/20                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/21                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/22                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/23                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/24                       notconnect   1          auto    auto  10/100BaseTX
+Gig0/1                       connected    1          auto    auto  10/100BaseTX
+Gig0/2                       connected    1          auto    auto  10/100BaseTX
+
+SW2#
+SW2#
+SW2#sh int trunk
+Port        Mode         Encapsulation  Status        Native vlan
+Gig0/1      on           802.1q         trunking      1001
+Gig0/2      on           802.1q         trunking      1001
+
+Port        Vlans allowed on trunk
+Gig0/1      10,30
+Gig0/2      10,20,30
+
+Port        Vlans allowed and active in management domain
+Gig0/1      10
+Gig0/2      10,20
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gig0/1      10
+Gig0/2      10,20
+
+SW2#--------------------------------------------------------------------------
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO2911/K9 (revision 1.0) with 491520K/32768K bytes of memory.
+Processor board ID FTX152400KS
+3 Gigabit Ethernet interfaces
+DRAM configuration is 64 bits wide with parity disabled.
+255K bytes of non-volatile configuration memory.
+249856K bytes of ATA System CompactFlash 0 (Read/Write)
+
+Press RETURN to get started!
+
+
+
+R1>
+R1>
+R1>en
+R1#
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#
+R1(config)#
+R1(config)#int g0/0
+R1(config-if)#no shut
+
+R1(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+R1(config-if)#int g0/0.10
+R1(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0.10, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.10, changed state to up
+
+R1(config-subif)#enca
+R1(config-subif)#encapsulation dot
+R1(config-subif)#encapsulation dot1Q vlan 10
+                                     ^
+% Invalid input detected at '^' marker.
+	
+R1(config-subif)#encapsulation dot1Q v
+R1(config-subif)#encapsulation dot1Q ?
+  <1-4094>  IEEE 802.1Q VLAN ID
+R1(config-subif)#encapsulation dot1Q 10
+R1(config-subif)#ip address 10.0.0.62 255.255.255.192
+R1(config-subif)#no shut
+R1(config-subif)#int g0/0.20
+R1(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0.20, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.20, changed state to up
+
+R1(config-subif)#encapsulation dot1Q 20
+R1(config-subif)#no shut
+R1(config-subif)#int g0/0.30
+R1(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0.30, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0.30, changed state to up
+
+R1(config-subif)#encapsulation dot1Q 30
+R1(config-subif)#ip address 10.0.0.190 255.255.255.192
+R1(config-subif)#no shut
+R1(config-subif)#int g0/0.20
+R1(config-subif)#ip address 10.0.0.126 255.255.255.192
+R1(config-subif)#
+R1(config-subif)#end
+R1#
+%SYS-5-CONFIG_I: Configured from console by console
+
+R1#wr
+Building configuration...
+[OK]
+R1#
+R1#sh ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES unset  up                    up 
+GigabitEthernet0/0.10  10.0.0.62       YES manual up                    up 
+GigabitEthernet0/0.20  10.0.0.126      YES manual up                    up 
+GigabitEthernet0/0.30  10.0.0.190      YES manual up                    up 
+GigabitEthernet0/1     unassigned      YES unset  administratively down down 
+GigabitEthernet0/2     unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+R1#sh ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+C       10.0.0.0/26 is directly connected, GigabitEthernet0/0.10
+L       10.0.0.62/32 is directly connected, GigabitEthernet0/0.10
+C       10.0.0.64/26 is directly connected, GigabitEthernet0/0.20
+L       10.0.0.126/32 is directly connected, GigabitEthernet0/0.20
+C       10.0.0.128/26 is directly connected, GigabitEthernet0/0.30
+L       10.0.0.190/32 is directly connected, GigabitEthernet0/0.30
+
+R1#wr
+Building configuration...
+[OK]
+R1#
+R1#sh ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES unset  up                    up 
+GigabitEthernet0/0.10  10.0.0.62       YES manual up                    up 
+GigabitEthernet0/0.20  10.0.0.126      YES manual up                    up 
+GigabitEthernet0/0.30  10.0.0.190      YES manual up                    up 
+GigabitEthernet0/1     unassigned      YES unset  administratively down down 
+GigabitEthernet0/2     unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+R1#sh ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/8 is variably subnetted, 6 subnets, 2 masks
+C       10.0.0.0/26 is directly connected, GigabitEthernet0/0.10
+L       10.0.0.62/32 is directly connected, GigabitEthernet0/0.10
+C       10.0.0.64/26 is directly connected, GigabitEthernet0/0.20
+L       10.0.0.126/32 is directly connected, GigabitEthernet0/0.20
+C       10.0.0.128/26 is directly connected, GigabitEthernet0/0.30
+L       10.0.0.190/32 is directly connected, GigabitEthernet0/0.30
+
+R1#sh int vlan
+% Incomplete command.
+R1#sh int
+GigabitEthernet0/0 is up, line protocol is up (connected)
+  Hardware is CN Gigabit Ethernet, address is 0050.0f2c.bc01 (bia 0050.0f2c.bc01)
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full-duplex, 100Mb/s, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00, 
+  Last input 00:00:08, output 00:00:05, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0 (size/max/drops); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue :0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 watchdog, 1017 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/0.10 is up, line protocol is up (connected)
+  Hardware is PQUICC_FEC, address is 0050.0f2c.bc01 (bia 0050.0f2c.bc01)
+  Internet address is 10.0.0.62/26
+  MTU 1500 bytes, BW 100000 Kbit, DLY 100 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID 10
+  ARP type: ARPA, ARP Timeout 04:00:00, 
+  Last clearing of "show interface" counters never
+GigabitEthernet0/0.20 is up, line protocol is up (connected)
+  Hardware is PQUICC_FEC, address is 0050.0f2c.bc01 (bia 0050.0f2c.bc01)
+  Internet address is 10.0.0.126/26
+  MTU 1500 bytes, BW 100000 Kbit, DLY 100 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID 20
+  ARP type: ARPA, ARP Timeout 04:00:00, 
+  Last clearing of "show interface" counters never
+GigabitEthernet0/0.30 is up, line protocol is up (connected)
+  Hardware is PQUICC_FEC, address is 0050.0f2c.bc01 (bia 0050.0f2c.bc01)
+  Internet address is 10.0.0.190/26
+  MTU 1500 bytes, BW 100000 Kbit, DLY 100 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID 30
+  ARP type: ARPA, ARP Timeout 04:00:00, 
+  Last clearing of "show interface" counters never
+GigabitEthernet0/1 is administratively down, line protocol is down (disabled)
+  Hardware is CN Gigabit Ethernet, address is 0050.0f2c.bc02 (bia 0050.0f2c.bc02)
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+
+R1#
+R1#
+R1#----------------------------------------------------------------------------------
